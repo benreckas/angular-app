@@ -30,7 +30,8 @@ export class UsersComponent implements OnInit {
           state: 'CA'
         },
         isActive: true,
-        registered: new Date('01/01/2018 08:30:00')
+        registered: new Date('01/01/2018 08:30:00'),
+        hide: true
       },
       {
         firstName: 'John',
@@ -42,7 +43,8 @@ export class UsersComponent implements OnInit {
           state: 'CA'
         },
         isActive: false,
-        registered: new Date('03/11/2017 06:20:00')
+        registered: new Date('03/11/2017 06:20:00'),
+        hide: true
       },
       {
         firstName: 'Jane',
@@ -53,8 +55,9 @@ export class UsersComponent implements OnInit {
           city: 'Coalinga',
           state: 'CA'
         },
-        isActive: true,
-        registered: new Date('11/02/2016 10:30:00')
+        isActive: false,
+        registered: new Date('11/02/2016 10:30:00'),
+        hide: true
       }
     ];
 
@@ -64,5 +67,9 @@ export class UsersComponent implements OnInit {
   addUser(user: User) {
     this.users.push(user);
   }
+
+  // toggleHide(user: User) {
+  //   user.hide = !user.hide;
+  // }
 
 }
